@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://wallpapercave.com/wp/3f3PCOx.jpg") center/cover no-repeat fixed;
+}
+
+/* login-box is defined below after button styles */
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+input[type="password"]:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+/* When password is valid (7+ chars) — green border */
+input[type="password"]:not(:placeholder-shown):valid {
+    border-color: green;
+}
+
+.hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: -14px;
+    margin-bottom: 18px;
+}
+
+/* Hint turns red when password is invalid */
+.login-box:has(input[type="password"]:not(:placeholder-shown):invalid) .hint {
+    color: red;
+}
+
+/* Hint turns green when password is valid */
+.login-box:has(input[type="password"]:not(:placeholder-shown):valid) .hint {
+    color: green;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056cc;
+}
+
+/* ===== Notification Bell ===== */
+.bell {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    color: white;
+}
+
+.bell-dot {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+}
+
+/* ===== Close Button ===== */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 22px;
+    color: #999;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.login-box {
+    width: 360px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    padding: 35px 30px;
+    position: relative;
+}
+
+/* ===== Chat Button ===== */
+.chat-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.chat-btn:hover {
+    background: #0056cc;
+}
+
+/* ===== Password Wrapper ===== */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 32px;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.clear-btn:hover {
+    color: #333;
+}
