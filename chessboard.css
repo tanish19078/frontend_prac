@@ -1,0 +1,16 @@
+.chessboard{
+    display:grid;
+    grid-template-columns:repeat(4, 40px);
+    grid-template-rows:repeat(4, 40px);
+    position: absolute;
+}
+
+.cell.white{
+    background:white;
+    border:1px solid black;
+}
+
+.cell.black{
+    background:black;
+    border:1px solid black;
+}
