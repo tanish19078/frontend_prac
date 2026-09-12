@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Practice</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { padding: 20px; background: #fafafa; }
+        
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 16px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .desktop-nav { display: flex; gap: 16px; list-style: none; }
+        .desktop-nav a { color: white; text-decoration: none; }
+        .mobile-toggle { display: none; font-size: 20px; background: none; border: none; color: white; }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .main-card {
+            background: white;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 16px;
+            border-radius: 6px;
+        }
+
+        /* Tablet Breakpoint */
+        @media (min-width: 640px) {
+            .cards-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop Breakpoint */
+        @media (min-width: 1024px) {
+            .cards-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile Breakpoint */
+        @media (max-width: 639px) {
+            .desktop-nav { display: none; }
+            .mobile-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Brand</h2>
+        <ul class="desktop-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+        <button class="mobile-toggle">&#9776;</button>
+    </header>
+
+    <div class="container">
+        <div class="main-card">
+            <h3>Responsive Breakpoints</h3>
+            <p>Resize your browser window to see the grid change from 1 column to 2 columns to 3 columns.</p>
+        </div>
+
+        <div class="cards-row">
+            <div class="card">Column 1</div>
+            <div class="card">Column 2</div>
+            <div class="card">Column 3</div>
+        </div>
+    </div>
+</body>
+</html>

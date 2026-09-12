@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations & Transitions</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { padding: 30px; background: #0f172a; color: white; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+        h1 { margin-bottom: 10px; }
+        .row { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; align-items: center; }
+
+        .btn-hover {
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-hover:hover {
+            background: #2563eb;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #334155;
+            border-top-color: #38bdf8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .pulse-box {
+            width: 80px;
+            height: 80px;
+            background: #ec4899;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.75; }
+        }
+
+        .slide-card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animations & Transitions</h1>
+
+    <div class="row">
+        <button class="btn-hover">Hover & Transform</button>
+        <div class="spinner" title="Loading Spinner"></div>
+        <div class="pulse-box">Pulse</div>
+    </div>
+
+    <div class="slide-card">
+        <h3>Slide-In Animated Card</h3>
+        <p>Created using CSS @keyframes and cubic-bezier easing.</p>
+    </div>
+</body>
+</html>
