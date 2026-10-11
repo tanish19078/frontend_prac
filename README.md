@@ -29,5 +29,4 @@ Fundamental web development topics, demos, and practice modules.
 |-------|-------------|----------------|
 | [`html-practice/`](frontend-concepts-practice/html-practice/) | Semantic HTML & Elements | Forms, Lists, Tables, Semantic layout |
 | [`css-practice/`](frontend-concepts-practice/css-practice/) | Core & Modern CSS | Flexbox, Grid, Tailwind CSS, Bootstrap 5, Animations, Media Queries, Box Model |
-| [`js-practice/`](frontend-concepts-practice/js-practice/) | Core JavaScript Concepts | Callbacks, Promises, LocalStorage, Fetch API, ES6 Features, DOM Manipulation |
-| [`react-practice/`](frontend-concepts-practice/react-practice/) | Core & Advanced React | JSX, Props, State, Lists, Effects, Ref, useMemo, useCallback, Custom Hooks, React Router, SPA Layout, Routing App |
+| [`react-practice/`](frontend-concepts-practice/react-practice/) | Core & Advanced React | JSX, Props, State, Lists, Effects, Ref, useMemo, useCallback, Custom Hooks, Forms & Validation, Context API, useReducer, Async State Machine, React Router, SPA Layout |
